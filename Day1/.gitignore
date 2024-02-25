@@ -1,0 +1,17 @@
+# Ignore the x64 directory
+x64/
+
+# Ignore specific files
+Day1
+Day1.vcxproj
+Day1.vcxproj.filters
+Day1.vcxproj.user
+
+# Ignore everything
+*
+
+# But not these files...
+!main
+!/.gitignore
+
+
