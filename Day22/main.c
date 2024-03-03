@@ -12,7 +12,6 @@ Output: {1,2,2,3,5,6}
 Explanation: The arrays we are merging are {1,2,3} and {2,5,6}.
 The result of the merge is {1,2,2,3,5,6} with the underlined elements coming from nums1.
 */
-
 #include <stdio.h>
 void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n)
 {
@@ -20,7 +19,7 @@ void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n)
 	in nums1 and nums2 during the merge process.*/
 	int i = 0, j = 0;
 
-	/*These pointers should initially point to the last valid element in each array, 
+	/*These pointers should initially point to the last valid element in each array,
 	which are m - 1 for nums1 and n - 1 for nums2.*/
 	i = m - 1;
 	j = n - 1;
@@ -48,8 +47,9 @@ void merge(int* nums1, int nums1Size, int m, int* nums2, int nums2Size, int n)
 	}
 
 	/*This loop handles the general case where there might be remaining elements
-	in nums2 after all elements in nums1 have been processed. In such a case, these 
-	remaining elements in nums2 should be copied to nums1.*/
+	in nums2 after all elements in nums1 have been processed. In such a case, these
+	remaining elements in nums2 should be copied to nums1.
+	Consider a case where nums1[] has no elements,nums2[]={1} and m=0 and n=1.*/
 	while (j >= 0)
 	{
 		nums1[k] = nums2[j];
