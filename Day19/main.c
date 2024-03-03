@@ -13,9 +13,11 @@ After sorting, it becomes [0,1,9,16,100].
 
 int* sortedSquares(int* nums, int numsSize, int* returnSize)
 {
-    *returnSize = numsSize;
-    int* result = (int*)malloc(numsSize * sizeof(int));
+    *returnSize = numsSize;//the size of the result array will be same as input array
+    int* result = (int*)malloc(numsSize * sizeof(int));//allocate memory for 
+    //Two pointers, left and right, are initialized to point to the start and end of the array respectively.
     int left = 0, right = numsSize - 1;
+
     for (int i = numsSize - 1; i >= 0; i--)
     {
         if (abs(nums[left]) > abs(nums[right]))
@@ -46,3 +48,5 @@ int main()
     free(result);
     return 0;
 }
+
+
