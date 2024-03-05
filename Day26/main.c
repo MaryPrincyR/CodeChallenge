@@ -1,3 +1,4 @@
+/*This program is from the book 'The C Programming Language' by K & R */
 #include <stdio.h>
 
 /*power: raise base to n-th power;n >= 0*/
