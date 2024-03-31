@@ -65,7 +65,11 @@ int main()
     int numsSize = sizeof(nums) / sizeof(nums[0]);
     int returnSize;
     int* result = findDisappearedNumbers(nums, numsSize, &returnSize);
-
+    if (result == NULL)
+    {
+        printf("Memory allocation failed.\n");
+        return 1; // Return an error code
+    }
     /*Print the result*/
     for (int j = 0; j < returnSize; j++)
     {
