@@ -74,6 +74,11 @@ int main()
 	int digitsSize = sizeof(digits) / sizeof(digits[0]);
 	int returnSize;
 	int* newArray = plusOne(digits, digitsSize, &returnSize);
+	if (newArray == NULL)
+	{
+		printf("Memory allocation failed.\n");
+		return 1; // Return an error code
+	}
 	for (int i = 0; i < returnSize; i++)
 	{
 		printf("%d\t", newArray[i]);
