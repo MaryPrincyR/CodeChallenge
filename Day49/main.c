@@ -38,14 +38,14 @@ int pivotIndex(int* nums, int numsSize)
     if (leftSum == NULL)
     {
         printf("Memory allocation for leftSum failed.\n");
-        return NULL;
+        return 1;
     }
 
     int* rightSum = (int*)malloc(numsSize * sizeof(int));
     if (rightSum == NULL)
     {
         printf("Memory allocation for rightSum failed.\n");
-        return NULL;
+        return 1;
     }
 
     leftSum[0] = 0;
