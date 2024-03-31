@@ -21,7 +21,7 @@ int main()
     if (array == NULL)
     {
         printf("Memory allocation for array has failed.\n");
-        return NULL;
+        return 1;
     }
     for (int i = 0; i < 5; i++)
     {
@@ -60,7 +60,7 @@ int main()
     {
         printf("Memory reallocation has failed.\n");
         free(array);
-        return NULL;
+        return 1;
     }
     else
     {
@@ -80,7 +80,7 @@ int main()
     {
         printf("Memory reallocation has failed.\n");
         free(array);
-        return NULL;
+        return 1;
     }
     else
     {
